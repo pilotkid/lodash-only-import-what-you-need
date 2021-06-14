@@ -20,13 +20,13 @@ orderBy(array1, x=>x.Name)
 
 - Reduce bundle size with a single action
     - Just use the command pallet and select `Lodash Shake`
-    ![Example](/images/NormalDemo.gif)
+    ![Example](https://github.com/pilotkid/lodash-only-import-what-you-need/raw/master/images/NormalDemo.gif)
 - Run when you need to.
     - You can develop importing the full lodash library and use this plugin to clean up your code after
-    ![Reusability Example](/images/Reuseablility.gif)
+    ![Reusability Example](https://github.com/pilotkid/lodash-only-import-what-you-need/raw/master/images/Reuseablility.gif)
 - Handles any name
     - It doesn't matter what you importted lodash as it will work
-    ![Handles Any Name Example](/images/HandlesAnyName.gif)
+    ![Handles Any Name Example](https://github.com/pilotkid/lodash-only-import-what-you-need/raw/master/images/HandlesAnyName.gif)
 - Supports ES6 syntax
     - Supports `import module from` syntax from ES6
 
