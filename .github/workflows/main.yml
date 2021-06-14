@@ -12,6 +12,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
+      - run: npm version ${GITHUB_REF##*/}
       - run: npm ci
       - name: Publish to Open VSX Registry
         uses: HaaLeo/publish-vscode-extension@v0
