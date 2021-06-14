@@ -1,6 +1,6 @@
 {
   "name": "lodash-import-what-you-need",
-  "publisher":"pilotkid2011",
+  "publisher":"pilotkid",
   "displayName": "lodash-import-what-you-need",
   "description": "Changes ES6 lodash imports to only import what is used in your code",
   "version": "1.0.0",
