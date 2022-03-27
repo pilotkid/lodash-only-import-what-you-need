@@ -53,7 +53,15 @@ function activate(context) {
 								"[Lodash Treeshake] Cannot run with lodash imported with curly brases. E.g. `import {filter} from 'lodash';`"
 							);
 							return;
-						} else {
+							
+						} 
+						// if imported as `import lodash from 'lodash';`
+						else if(lcx.includes("* as ")) {
+							let spaces = x.split(" ");
+							lodashText = spaces[3];
+							break;
+						}
+						else{
 							let spaces = x.split(" ");
 							lodashText = spaces[1];
 							break;
