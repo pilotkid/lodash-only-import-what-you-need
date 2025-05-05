@@ -11,9 +11,7 @@ const vscode = require('vscode');
 function activate(context) {
   // Use the console to output diagnostic information (console.log) and errors (console.error)
   // This line of code will only be executed once when your extension is activated
-  console.log(
-    'Congratulations, your extension "lodash-import-what-you-need" is now active!'
-  );
+  console.log('✅\t "lodash-import-what-you-need" is now active!');
 
   // The command has been defined in the package.json file
   // Now provide the implementation of the command with  registerCommand
@@ -21,6 +19,10 @@ function activate(context) {
   let disposable = vscode.commands.registerCommand(
     'lodash-import-what-you-need.lodash-treeshake',
     function () {
+      let runSource = 'command-run';
+      if (arguments[0]) {
+        runSource = arguments[0].source;
+      }
       // The code you place here will be executed every time your command is executed
       let lodashFunctions = require('./lodashFunctions.js');
       const editor = vscode.window.activeTextEditor;
@@ -48,7 +50,7 @@ function activate(context) {
             !lcx.includes('lodash/')
           ) {
             importLodashLine = index;
-            if (lcx.includes('{')) {
+            if (lcx.includes('{') && runSource == 'command-run') {
               vscode.window.showInformationMessage(
                 "[Lodash Treeshake] Cannot run with lodash imported with curly brases. E.g. `import {filter} from 'lodash';`"
               );
@@ -68,7 +70,7 @@ function activate(context) {
         }
 
         //If lodash import was not found then alert user
-        if (importLodashLine === -1) {
+        if (importLodashLine === -1 && runSource == 'command-run') {
           vscode.window.showInformationMessage(
             `[Lodash Treeshake] Lodash was not found!`
           );
@@ -183,6 +185,22 @@ function activate(context) {
       }
     }
   );
+
+  vscode.workspace.onDidSaveTextDocument((document) => {
+    const config = vscode.workspace.getConfiguration('lodashImportWhatYouNeed');
+    const runOnSave = config.get('runOnSave');
+
+    if (
+      runOnSave &&
+      vscode.window.activeTextEditor &&
+      vscode.window.activeTextEditor.document === document
+    ) {
+      vscode.commands.executeCommand(
+        'lodash-import-what-you-need.lodash-treeshake',
+        { source: 'on-save' }
+      );
+    }
+  });
 
   context.subscriptions.push(disposable);
 }
