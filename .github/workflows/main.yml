@@ -3,7 +3,7 @@ name: Build and Publish VSIX
 on:
   push:
     tags:
-      - "v*"
+      - 'v*'
 
 jobs:
   deploy:
@@ -34,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: extension-vsix
-          path: "*.vsix"
+          path: '*.vsix'
 
       - name: Publish to VSCode Marketplace
         run: npx vsce publish --packagePath $(ls *.vsix)
