@@ -1,10 +1,11 @@
 {
   "name": "lodash-import-what-you-need",
   "publisher": "pilotkid",
-  "displayName": "lodash-import-what-you-need",
+  "displayName": "Lodash Import Only What You Need",
   "description": "Changes ES6 lodash imports to only import what is used in your code",
   "version": "0.0.0",
-  "license": "GPLv3",
+  "license": "MIT",
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.57.0"
   },
@@ -14,6 +15,18 @@
   "activationEvents": [
     "onCommand:lodash-import-what-you-need.lodash-treeshake"
   ],
+  "author": {
+    "name": "Marcello Bachechi",
+    "url": "https://github.com/pilotkid"
+  },
+  "homepage": "https://github.com/pilotkid/lodash-only-import-what-you-need",
+  "sponsor": {
+    "url": "https://ko-fi.com/marcellobachechi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pilotkid/lodash-only-import-what-you-need"
+  },
   "main": "./extension.js",
   "contributes": {
     "commands": [
