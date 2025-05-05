@@ -1,39 +1,40 @@
 <img style="width:auto; max-height:256px" src="images/banner.png"/>
-    
+
 
 # Lodash Import Only What You Need!
 
 This is a quick extension that allows you to replace your lodash imports quickly and easily using indvidual module importing. This is ideal for existing projects that use lodash frequently but need to reduce bundle size.
 
 For example this plugin will change the following code
+
 ```js
-import _ from 'lodash'
-lodash.filter(array1, x=>x.isEnabled)
-lodash.orderBy(array1, x=>x.Name)
+import _ from 'lodash';
+lodash.filter(array1, (x) => x.isEnabled);
+lodash.orderBy(array1, (x) => x.Name);
 ```
+
 To
+
 ```js
-import filter from 'lodash/filter'
-import orderBy from 'lodash/orderBy'
-filter(array1, x=>x.isEnabled)
-orderBy(array1, x=>x.Name)
+import filter from 'lodash/filter';
+import orderBy from 'lodash/orderBy';
+filter(array1, (x) => x.isEnabled);
+orderBy(array1, (x) => x.Name);
 ```
 
 ## Features
 
 - Reduce bundle size with a single action
-    - Just use the command pallet and select `Lodash Shake`
+  - Just use the command pallet and select `Lodash Shake`
     ![Example](https://github.com/pilotkid/lodash-only-import-what-you-need/raw/master/images/NormalDemo.gif)
 - Run when you need to.
-    - You can develop importing the full lodash library and use this plugin to clean up your code after
+  - You can develop importing the full lodash library and use this plugin to clean up your code after
     ![Reusability Example](https://github.com/pilotkid/lodash-only-import-what-you-need/raw/master/images/Reuseablility.gif)
 - Handles any name
-    - It doesn't matter what you importted lodash as it will work
+  - It doesn't matter what you importted lodash as it will work
     ![Handles Any Name Example](https://github.com/pilotkid/lodash-only-import-what-you-need/raw/master/images/HandlesAnyName.gif)
 - Supports ES6 syntax
-    - Supports `import module from` syntax from ES6
-
-
+  - Supports `import module from` syntax from ES6
 
 ## Known Issues
 
@@ -42,15 +43,17 @@ orderBy(array1, x=>x.Name)
 - Adds new line in sometimes inappropriate places wherever `import` statements are
 
 ## Contributors
+
 - [@pilotkid](https://github.com/pilotkid)
 - [@LajnaLegenden](https://github.com/LajnaLegenden)
 
 ## Support
+
 For support please open an issue or pull request on [github](https://github.com/pilotkid/lodash-only-import-what-you-need)
 
 ## Please also consider supporting me on ko-fi
-<a href='https://ko-fi.com/marcellobachechi' target='_blank'><img height='35' style='border:0px;height:46px;' src='images/kofi.png' border='0' alt='Buy Me a Coffee at ko-fi.com' />
 
+<a href='https://ko-fi.com/marcellobachechi' target='_blank'><img height='35' style='border:0px;height:46px;' src='images/kofi.png' border='0' alt='Buy Me a Coffee at ko-fi.com' />
 
 ---
 
