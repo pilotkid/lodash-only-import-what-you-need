@@ -65,7 +65,11 @@
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
-    "test": "node ./test/runTest.js"
+    "test": "node ./test/runTest.js",
+    "build": "tsc -p .",
+    "package": "vsce package",
+    "publish:vsce": "vsce publish",
+    "publish:npm": "npm publish"
   },
   "devDependencies": {
     "@types/glob": "^7.1.3",
