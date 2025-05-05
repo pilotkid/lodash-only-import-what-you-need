@@ -3,7 +3,7 @@
   "publisher": "pilotkid",
   "displayName": "Lodash Import Only What You Need",
   "description": "Changes ES6 lodash imports to only import what is used in your code",
-  "version": "0.0.0",
+  "version": "1.2.0",
   "license": "MIT",
   "icon": "images/icon.png",
   "engines": {
