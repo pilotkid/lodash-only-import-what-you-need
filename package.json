@@ -13,7 +13,23 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:lodash-import-what-you-need.lodash-treeshake"
+    "onCommand:lodash-import-what-you-need.lodash-treeshake",
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact",
+    "onLanguage:javascriptreact",
+    "onLanguage:vuejs",
+    "onLanguage:vue",
+    "onLanguage:vue-html",
+    "onLanguage:vue-template",
+    "onLanguage:vuejs-html",
+    "onLanguage:vuejs-template",
+    "onLanguage:vuejs-sfc",
+    "onLanguage:vue-sfc",
+    "onLanguage:vuejs-sfc-html",
+    "onLanguage:vuejs-sfc-template",
+    "onLanguage:vue-sfc-html",
+    "onLanguage:vue-sfc-template"
   ],
   "author": {
     "name": "Marcello Bachechi",
@@ -29,6 +45,16 @@
   },
   "main": "./extension.js",
   "contributes": {
+    "configuration": {
+      "title": "Lodash Import What You Need",
+      "properties": {
+        "lodashImportWhatYouNeed.runOnSave": {
+          "type": "boolean",
+          "default": false,
+          "description": "Run the Lodash Treeshake command automatically on save"
+        }
+      }
+    },
     "commands": [
       {
         "command": "lodash-import-what-you-need.lodash-treeshake",

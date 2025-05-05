@@ -25,14 +25,17 @@ orderBy(array1, (x) => x.Name);
 ## Features
 
 - Reduce bundle size with a single action
-  - Just use the command pallet and select `Lodash Shake`
-    ![Example](https://github.com/pilotkid/lodash-only-import-what-you-need/raw/master/images/NormalDemo.gif)
+    - Just use the command pallet and select `Lodash Shake`
+    ![Example](images/NormalDemo.gif)
 - Run when you need to.
-  - You can develop importing the full lodash library and use this plugin to clean up your code after
-    ![Reusability Example](https://github.com/pilotkid/lodash-only-import-what-you-need/raw/master/images/Reuseablility.gif)
+    - You can develop importing the full lodash library and use this plugin to clean up your code after
+    ![Reusability Example](images/Reuseablility.gif)
 - Handles any name
-  - It doesn't matter what you importted lodash as it will work
-    ![Handles Any Name Example](https://github.com/pilotkid/lodash-only-import-what-you-need/raw/master/images/HandlesAnyName.gif)
+    - It doesn't matter what you importted lodash as it will work
+    ![Handles Any Name Example](images/HandlesAnyName.gif)
+- Auto Save
+    - Enable the setting `Lodash Import What You Need: Run On Save` to automatically treeshake lodash (`"lodashImportWhatYouNeed.runOnSave": true` in `.vscode/settings.json`)
+    ![AutoSave](images/SaveAutoSetting.png)
 - Supports ES6 syntax
   - Supports `import module from` syntax from ES6
 
