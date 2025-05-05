@@ -24,9 +24,6 @@ jobs:
           TAG_VERSION=${GITHUB_REF#refs/tags/}
           npm version --no-git-tag-version $TAG_VERSION
 
-      - name: Compile Extension
-        run: npm run build
-
       - name: Package VSIX
         run: npx vsce package
 
